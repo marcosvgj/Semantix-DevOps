@@ -1,8 +1,6 @@
 
 # Task - DevOps Engineer 
 
-![Semantix](img/semantix.jpg)
-
 ### Table of Contents
 
 1. [Descrição e melhorias aplicadas](#desc)
@@ -29,7 +27,7 @@ forma síncrona, ou seja, cada solicitação é recebida, processada e por fim a
 O processamento de cada solicitação inclui uma tarefa de busca em um dicionário em memória.
 Dado um texto, é necessário identificar todos os registros que possuem as palavras contidas no 
 texto buscado. 
-Em todos os casos, essa busca possui complexidade **O(XN)**, no qual: 
+Em todos os casos, essa busca possui complexidade **O(X*N)**, no qual: 
 
     X: Quantidade de palavras existentes no texto de busca.
     N: Quantidade de registros do dicionário.
@@ -43,8 +41,8 @@ As primeiras modificações realizadas em relação ao codigo original foram:
 * Paralelismo no recebimento de requisições através de sub-processos.
 
 * Alteração do algoritmo de busca, 
-com o objetivo de tornar o algoritmo menos complexo no quando analisado o custo computacional
-    * A cada iteração, o algoritmo diminui o espaço de busca utilizado, conforme restrições impostas em iterações anteriores.
+com o objetivo de tornar o algoritmo menos complexo no quando analisado o custo computacional:
+    * A cada iteração, o algoritmo diminui o espaço de busca utilizado, conforme restrições impostas em iterações anteriores. 
 
 * Adoção de arquivos de configuração .yml para facilitar a mudança de variáveis posteriormente.
  
@@ -53,18 +51,23 @@ com o objetivo de tornar o algoritmo menos complexo no quando analisado o custo 
 
 * Construção de um dicionário que é populado conforme a chegada de novas requisições:
 a adoção desta solução tem finalidade de atuar como um cache, 
-afim de reduzir a complexidade computacional da busca à O(1) no melhor caso (se o mesmo texto já foi buscado anteriormente).
+afim de reduzir a complexidade computacional da busca a O(1) no melhor caso (se o mesmo texto já foi buscado anteriormente).
                
     > Ponto positivo: A complexidade computacional de 
     requisições com valores frequentes é O(1)
    
     > Ponto negativo: Ocupa mais memória.*
+    
+    > Desafios: Arquitetar uma solução com IPC por meio de semáforos, visando assegurar a integridade do cache. 
 
 ### 1.3 Análise do desempenho obtido
+Foi realizado uma repetição do load test dado inicialmente. No caso, o test-stress levou em consideração repetir por 150 vezes
+o load teste, visando averiguar o desempenho a longo prazo da API antiga e a recém implementada.
+
+Na iteração abaixo, foi a API recém implementada atendeu as requisições 2.35 vezes mais rápido que a versão anterior.
+ 
 
 ![Benchmark](app/img/output.png)
-
- 
 
 ## 2.0 Instruções de uso 
 
