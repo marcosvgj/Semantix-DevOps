@@ -12,6 +12,7 @@
 2. [Instruções de uso ](#instruct)
     - 2.1 [Pré-requisitos](#pre_requisits)
     - 2.2 [Tarefa 1](#task_1)
+    - 2.2 [Tarefa 2](#task_2)
 
 <a name="desc"></a>
 ## 1.0 Descrição e melhorias aplicadas
@@ -126,5 +127,10 @@ Para suspender o serviço, basta executar os comandos:
     > docker ps (Averigua o ID do container)
     > docker stop <ID_Container>    
 
-    
+<a name="task_1"></a>
+### Tarefa 1 - CD/CI
+
+
+
+
 
