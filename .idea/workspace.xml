@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b704f2a-46fe-495b-b2f6-5d20babbc1c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/READ_ME.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/img/semantix.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output.png" afterPath="$PROJECT_DIR$/app/img/output.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/READ_ME.md" afterPath="$PROJECT_DIR$/READ_ME.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +54,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="85">
-                <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -89,6 +90,7 @@
         <option value="$PROJECT_DIR$/app/Makefile" />
         <option value="$PROJECT_DIR$/app/app.py" />
         <option value="$PROJECT_DIR$/doc.md" />
+        <option value="$PROJECT_DIR$/READ_ME.md" />
       </list>
     </option>
   </component>
@@ -121,11 +123,6 @@
               <item name="semantix_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="semantix_api" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="semantix_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semantix_api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -138,6 +135,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marcos\Desktop\semantix_api\app\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Marcos\Desktop\semantix_api" />
       <recent name="C:\Users\Marcos\Desktop\semtest\app" />
@@ -237,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544445036523</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Semantix DevOps engineer Test files">
+      <created>1544448105334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544448105334</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -496,7 +503,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="85">
-            <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />

@@ -1,23 +1,26 @@
 
 # Task - DevOps Engineer 
 
+![Benchmark](app/img/semantix.png)
 
 ### Table of Contents
 
-1. [Descrição e melhorias aplicadas](##1.0 Descrição e melhorias aplicadas)
-    - 1.1 [Solução anterior](###1.1 Solução anterior)
-    - 1.2 [Otimização da API](###1.2 Otimização da API)
-    - 1.2 [Possíveis modificações futuras](###1.3 Possíveis modificações futuras)
+1. [Descrição e melhorias aplicadas](#desc)
+    - 1.1 [Solução anterior](#sol_ant)
+    - 1.2 [Otimização da API](#otim)
+    - 1.2 [Possíveis modificações futuras](#future)
     
-2. [Instruções de uso ](##2.0 Instruções de uso )
-    - 2.1 [Pré-requisitos](###2.1 Pré-requisitos)
-    - 2.2 [Tarefa 1](###2.2 Tarefa 1)
-    - 2.3 [Tarefa 2](###2.3 Tarefa 2)
+2. [Instruções de uso ](#instruct)
+    - 2.1 [Pré-requisitos](#pre_requisits)
+    - 2.2 [Tarefa 1](#task_1)
+    - 2.3 [Tarefa 2](#task_2)
 
-![stack Overflow](http://lmsotfy.com/so.png)
 
-##1.0 Descrição e melhorias aplicadas
-###1.1 Solução anterior
+<a name="desc"></a>
+## 1.0 Descrição e melhorias aplicadas
+
+<a name="sol_ant"></a>
+### 1.1 Solução anterior
 
 A API anterior contava com o recebimento de solicitações **GET** por meio de um single-thread e de 
 forma síncrona, ou seja, cada solicitação é recebida, processada e por fim atendida. 
@@ -30,7 +33,8 @@ Em todos os casos, essa busca possui complexidade **O(XN)**, no qual:
     X: Quantidade de palavras existentes no texto de busca.
     N: Quantidade de registros do dicionário.
 
-###1.2 Otimização da API
+<a name="otim"></a>
+### 1.2 Otimização da API
 As primeiras modificações realizadas em relação ao codigo original foram: 
 
 * Reescrita do código, adotando conceitos de programação funcional.
@@ -43,7 +47,7 @@ com o objetivo de tornar o algoritmo menos complexo no quando analisado o custo 
 
 * Adoção de arquivos de configuração .yml para facilitar a mudança de variáveis posteriormente.
  
-
+<a name="future"></a>
 ### 1.3 Possíveis modificações futuras 
 
 * Construção de um dicionário que é populado conforme a chegada de novas requisições:
@@ -57,7 +61,7 @@ afim de reduzir a complexidade computacional da busca à O(1) no melhor caso (se
 
 ### 1.3 Análise do desempenho obtido
 
-![Benchmark](output.png)
+![Benchmark](app/img/output.png)
 
  
 
@@ -87,5 +91,4 @@ Para testar se o serviço contido no docker funciona, execute uma chamada simple
 
 
     
-
 
