@@ -3,10 +3,10 @@ set -e
 
 if [ "$ENV" = 'UNIT' ]; then
   echo "Test Unit"
-  exec python "TestCase.py"
+  exec python3 "TestCase.py"
 else
   echo "Dev API"
-  exec python "app.py"
+  exec python3 "app.py"
 fi
 
 
