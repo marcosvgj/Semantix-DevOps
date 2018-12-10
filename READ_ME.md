@@ -1,14 +1,15 @@
 
 # Task - DevOps Engineer 
 
-![Benchmark](app/img/semantix.png)
+<img src="app/img/semantix.png" alt="drawing" style="width:100px;"/> </img>
 
 ### Table of Contents
 
 1. [Descrição e melhorias aplicadas](#desc)
     - 1.1 [Solução anterior](#sol_ant)
     - 1.2 [Otimização da API](#otim)
-    - 1.2 [Possíveis modificações futuras](#future)
+    - 1.3 [Análise do desempenho obtido](#result)
+    - 1.4 [Possíveis modificações futuras](#future)
     
 2. [Instruções de uso ](#instruct)
     - 2.1 [Pré-requisitos](#pre_requisits)
