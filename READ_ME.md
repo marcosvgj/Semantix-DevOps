@@ -58,41 +58,74 @@ afim de reduzir a complexidade computacional da busca a O(1) no melhor caso (se 
    
     > Ponto negativo: Ocupa mais memória.*
     
-    > Desafios: Arquitetar uma solução com IPC por meio de semáforos, visando assegurar a integridade do cache. 
+    > Desafios: Arquitetar uma solução com IPC por meio de semáforos, visando assegurar a integridade do cache. Além disso, 
+    identificar e tratar momentos em que a API apresenta latência fora da média.
 
 ### 1.3 Análise do desempenho obtido
 Foi realizado uma repetição do load test dado inicialmente. No caso, o test-stress levou em consideração repetir por 150 vezes
 o load teste, visando averiguar o desempenho a longo prazo da API antiga e a recém implementada.
-
-Na iteração abaixo, foi a API recém implementada atendeu as requisições 2.35 vezes mais rápido que a versão anterior.
  
-
 ![Benchmark](app/img/output.png)
 
+*obs.: Na simulação realizada, a API recém implementada atendeu as requisições 2.35 vezes mais rápido que a versão anterior.*
+
+<a name="instruct"></a>
 ## 2.0 Instruções de uso 
 
+
+<a name="pre_requisits"></a>
 ### 2.1 Pré-requisitos
 
-    Docker previamente configurado.
+    > Docker configurado e disponível.
+    > git instalado
+    
 
+<a name="task_1"></a>
 ### Tarefa 1 
 
-Dentro do diretório criado, execute o comando:
+Crie um novo diretório chamado **semantix_test** ou outro nome de sua preferência e entre através do comando **cd**:
 
-    > docker-compose up
+    > mkdir <nome_diretorio>    
+    > cd <nome_diretorio>
 
-Este comando carregará todas as configurações contidas no Dockerfile, além disso, empregará configurações adicionais
-que estão sinalizadas no *docker-compose.yml*
+Clone o repositório em que a api está armazenada através do comando. Depois entre no diretório clonado: 
 
+    > git clone https://github.com/marcosvgj/semantix_api.git
+    > cd semantix_api 
+    
+Dentro do diretório **semantix_api** execute o seguinte comando para construir a imagem: 
+
+    > docker build -t "semantix_test:0.1" 
+  
+*obs.: Este comando pode demorar um pouco, já que a imagem base utilizada é um SO com as configurações básicas.*
+
+
+Apos a execução do comando a cima, inicie o container utilizando a imagem criada:
+
+    > docker run -d -p 4000:4000 "semantix_test:0.1"
+
+
+Este comando redirecionará as chamadas da porta 4000 do container para a porta 4000 do HOST.
+Além disso, este container foi iniciado em segundo plano. 
+ 
 Após esta etapa, o container criado estará pronto para uso. 
 
 Para testar se o serviço contido no docker funciona, execute uma chamada simples via curl: 
 
-    > curl http://localhost:4000/s/fun%20city
-    
-**obs.: O serviço estára escutando chamadas na porta 4000.**
+    > curl http://localhost:4000/s/city%20tour
 
+Caso o esteja usando uma VMBox para execução do container, 
+verifique o se o host utilizado para realizar as chamadas é o localhost. 
+O host pode ser adquirido por meio do comando: 
 
+    >  curl $(docker-machine ip default):4000/s/city%20tour
 
+Para suspender o serviço, basta executar os comandos: 
+
+    > docker ps (Averigua o ID do container)
+    > docker stop <ID_Container>    
+
+<a name="task_2"></a>
+### Tarefa 2
     
 
