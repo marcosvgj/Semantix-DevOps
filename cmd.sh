@@ -3,7 +3,7 @@
 set -e
 
 if [ "$ENV" = 'UNIT' ]; then
-  echo "Running Development Server"
+  echo "Running Test Cases"
   exec python3 "TestCase.py"
 else
   echo "Running Production Server"
