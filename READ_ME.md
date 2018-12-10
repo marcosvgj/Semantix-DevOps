@@ -80,7 +80,7 @@ o load teste, visando averiguar o desempenho a longo prazo da API antiga e a rec
     
 
 <a name="task_1"></a>
-### Tarefa 1 
+### Tarefa 1
 
 Crie um novo diretório chamado **semantix_test** ou outro nome de sua preferência 
 e entre através do comando **cd**:
@@ -127,8 +127,30 @@ Para suspender o serviço, basta executar os comandos:
     > docker ps (Averigua o ID do container)
     > docker stop <ID_Container>    
 
-<a name="task_1"></a>
-### Tarefa 1 - CD/CI
+<a name="task_2"></a>
+### Tarefa 2 - CD/CI
+
+#### Pré-requisitos
+    > Cadastro no Docker HUB
+    > Jenkins
+    
+
+Para buscar o repositório fornecido no item anterior, execute o comando: 
+
+    > docker pull <nome_repositorio>
+    
+No caso o respositorio possui o nome **marcosvgj/semantix_api** e a tag **auto** (referenciando uma imagem com build automatizado).
+
+    > docker pull "marcosvgj/semantix_api:auto"
+
+Crie um container através da imagem baixada do repositório do Docker Hub: 
+
+    > docker run -d -p 4000:4000 "marcosvgj/semantix_api:auto"
+
+
+    
+
+
 
 
 
