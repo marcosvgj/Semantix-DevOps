@@ -1,0 +1,5 @@
+database:
+  DATA_SOURCE: "https://www.getyourguide.com/-t62214/reviews.json?&count=100&page=[0-100]&rating=0&type=&sortBy=&direction=&remove=false"
+
+server:
+  PORT: 4000
