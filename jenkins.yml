@@ -3,5 +3,5 @@ semantix_api:
         expose:
             - "4000"
         environment:
-            ENV: PROD
+            ENV: DEV
                   
