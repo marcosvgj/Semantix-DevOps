@@ -1,0 +1,7 @@
+semantix_api:
+    build: .
+        expose:
+            - "4000"
+        environment:
+            ENV: PROD
+                  
