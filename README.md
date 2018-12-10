@@ -61,7 +61,7 @@ afim de reduzir a complexidade computacional da busca a O(1) no melhor caso (se 
     identificar e tratar momentos em que a API apresenta latência fora da média.
 
 ### 1.3 Análise do desempenho obtido
-Foi realizado uma repetição do load test dado inicialmente. No caso, o test-stress levou em consideração repetir por 150 vezes
+Foi realizado uma repetição do load test dado inicialmente. No caso, cogitei em repetir por 150 vezes
 o load teste, visando averiguar o desempenho a longo prazo da API antiga e a recém implementada.
  
 ![Benchmark](app/img/output.png)
@@ -132,7 +132,6 @@ Para suspender o serviço, basta executar os comandos:
 
 #### Pré-requisitos
     > Cadastro no Docker HUB
-    > Jenkins
     
 
 Para buscar o repositório fornecido no item anterior, execute o comando: 
