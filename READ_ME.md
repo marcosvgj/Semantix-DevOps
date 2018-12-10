@@ -1,7 +1,7 @@
 
 # Task - DevOps Engineer 
 
-<img src="app/img/semantix.png" alt="drawing" style="width:25px;"/> </img>
+![Semantix]()<img src="app/img/semantix.png"  width="50" height="50">
 
 ### Table of Contents
 
