@@ -83,12 +83,14 @@ o load teste, visando averiguar o desempenho a longo prazo da API antiga e a rec
 <a name="task_1"></a>
 ### Tarefa 1 
 
-Crie um novo diretório chamado **semantix_test** ou outro nome de sua preferência e entre através do comando **cd**:
+Crie um novo diretório chamado **semantix_test** ou outro nome de sua preferência 
+e entre através do comando **cd**:
 
     > mkdir <nome_diretorio>    
     > cd <nome_diretorio>
 
-Clone o repositório em que a api está armazenada através do comando. Depois entre no diretório clonado: 
+Clone o repositório em que a api está armazenada através do comando. 
+Depois entre no diretório clonado: 
 
     > git clone https://github.com/marcosvgj/semantix_api.git
     > cd semantix_api 
@@ -105,8 +107,9 @@ Apos a execução do comando a cima, inicie o container utilizando a imagem cria
     > docker run -d -p 4000:4000 "semantix_test:0.1"
 
 
-Este comando redirecionará as chamadas da porta 4000 do container para a porta 4000 do HOST.
-Além disso, este container foi iniciado em segundo plano. 
+Este comando redirecionará as chamadas da porta 4000 do container para a 
+porta 4000 do host. Além disso, este container foi iniciado em segundo plano 
+por conta da flag **-d**. 
  
 Após esta etapa, o container criado estará pronto para uso. 
 
@@ -116,7 +119,7 @@ Para testar se o serviço contido no docker funciona, execute uma chamada simple
 
 Caso o esteja usando uma VMBox para execução do container, 
 verifique o se o host utilizado para realizar as chamadas é o localhost. 
-O host pode ser adquirido por meio do comando: 
+A chamada com o host diferente pode ser adquirido por meio do comando: 
 
     >  curl $(docker-machine ip default):4000/s/city%20tour
 
