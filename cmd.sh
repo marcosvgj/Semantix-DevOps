@@ -1,11 +1,13 @@
-#!/usr/bin/env bash
-
+#!/bin/bash
 set -e
 
 if [ "$ENV" = 'UNIT' ]; then
-  echo "Running Test Cases"
-  exec python3 "TestCase.py"
+  echo "Test Unit"
+  exec python "TestCase.py"
 else
-  echo "Running Production Server"
-  exec python3 "app.py"
+  echo "Dev API"
+  exec python "app.py"
 fi
+
+
+

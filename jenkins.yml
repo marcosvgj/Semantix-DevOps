@@ -1,7 +1,7 @@
 semantix_api:
     build: .
-        expose:
-            - "4000"
-        environment:
-            ENV: DEV
+    expose:
+        - "4000"
+    environment:
+        ENV: DEV
                   
