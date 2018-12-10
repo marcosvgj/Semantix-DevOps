@@ -58,9 +58,11 @@ if __name__ == '__main__':
     cfg = load_config()
     db = init_db(cfg['database']['DATA_SOURCE'])
     app = make_app(db)
+
     sockets = bind_sockets(cfg['server']['PORT'])
     fork_processes(0)
     server = HTTPServer(app)
     server.add_sockets(sockets)
+
     logging.info("Server are listening in %d port ", cfg['server']['PORT'])
     IOLoop.current().start()
