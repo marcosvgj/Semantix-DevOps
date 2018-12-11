@@ -19,10 +19,6 @@ class DB(object):
         self.entries.append(entry)
 
     def search(self, query_string):
-        """
-        >>> DB([(1, "", "tour city",), (2, "", "some other",)]).search("city tour")
-        [(1, '', 'tour city')]
-        """
         result = self.entries
         for item in set(query_string.split()):
             result = filter(lambda x: item in x[2], result)
