@@ -66,7 +66,7 @@ o load teste, visando averiguar o desempenho a longo prazo da API antiga e a rec
  
 ![Benchmark](app/img/output.png)
 
-*obs.: Na simulação realizada, a API recém implementada atendeu as requisições 2.35 vezes mais rápido que a versão anterior.*
+*obs.: Na simulação realizada, a API recém implementada atendeu em média 2.35 vezes mais rápido que a versão anterior.*
 
 <a name="instruct"></a>
 ## 2.0 Instruções de uso 
