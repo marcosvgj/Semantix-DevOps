@@ -1,0 +1,45 @@
+################### Jenkins - Build Pipeline ####################
+#################################################################
+
+#Compose Pattern
+COMPOSE_ARGS=" -f jenkins.yml -p jenkins "
+
+#Remove all containers
+
+sudo docker-compose $COMPOSE_ARGS stop
+sudo docker-compose $COMPOSE_ARGS rm --force -v
+
+#Building the system
+
+sudo docker-compose $COMPOSE_ARGS build --no-cache
+sudo docker-compose $COMPOSE_ARGS up -d
+
+#Run Unit testing
+sudo docker-compose $COMPOSE_ARGS run --no-deps --rm -e ENV=UNIT semantix_api
+ERR=$?
+
+#Run System testing if unit testing is succeed
+if [ $ERR -eq 0 ]; then
+  IP=$(sudo docker inspect -f {{.NetworkSettings.IPAddress}} \
+           jenkins_semantix_api_1)
+  CODE=$(curl -sL -w "%{http_code}" $IP:4000/s/city -o /dev/null) || true
+  if [ $CODE -eq 200 ]; then
+    echo "System test is finished successfully"
+    HASH=$(git rev-parse --short HEAD)
+    sudo docker tag -f jenkins_semantix_api marcosvgj/semantix_testapi:$HASH
+    sudo docker tag -f jenkins_semantix_api marcosvgj/semantix_testapi:newest
+    echo " ** Pushing image ** "
+    sudo docker login -u ********* -p ***********
+    sudo docker push marcosvgj/semantix_testapi:$HASH
+    sudo docker push marcosvgj/semantix_testapi:newest
+  else
+    echo "Site returned " $CODE
+    ERR=1
+  fi
+fi
+
+## Stop system
+sudo docker-compose $COMPOSE_ARGS stop
+sudo docker-compose $COMPOSE_ARGS rm --force -v
+return $ERR
+
