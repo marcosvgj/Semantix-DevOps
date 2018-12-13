@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ "$ENV" = 'DEV' ]; then
+if [ "$ENV" = 'PROD' ]; then
     echo "** Running Server **"
     exec python3 "app.py"
 elif [ "$ENV" = 'UNIT' ];then
