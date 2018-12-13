@@ -64,7 +64,7 @@ afim de reduzir a complexidade computacional da busca a O(1) no melhor caso (se 
 Foi realizado uma repetição do load test dado inicialmente. No caso, cogitei em repetir por 150 vezes
 o load teste, visando averiguar o desempenho a longo prazo da API antiga e a recém implementada.
  
-![Benchmark](app/img/output.png)
+![Benchmark](img/output.png)
 
 *obs.: Na simulação realizada, a API recém implementada atendeu em média 2.35 vezes mais rápido que a versão anterior.*
 

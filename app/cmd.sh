@@ -1,13 +1,14 @@
 #!/bin/bash
 set -e
 
-if [ "$ENV" = 'UNIT' ]; then
-  echo "Test Unit"
-  exec python3 "TestCase.py"
+if [ "$ENV" = 'DEV' ]; then
+    echo "** Running Server **"
+    exec python3 "app.py"
+elif [ "$ENV" = 'UNIT' ];then
+    echo " ** Running Unit Test ** "
+	exec python3 "TestCase.py"
 else
-  echo "Dev API"
-  exec python3 "app.py"
+    echo "** Option doesn't recognized ** "
 fi
-
 
 
