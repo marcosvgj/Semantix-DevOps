@@ -20,7 +20,7 @@
 
 ### 4. Acess http://localhost:8080 or {host}:8080:   
     
-    >  4.1 Create new jobs.
+    > 4.1 Create new jobs.
     > 4.2 Put item_name: 'semantix_api'
     > 4.3 Select Freestyle project
     > 4.4 Defin Source Code Manangement (in this case the source is GitHub - GIT). 
