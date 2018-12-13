@@ -26,8 +26,8 @@ if [ $ERR -eq 0 ]; then
   if [ $CODE -eq 200 ]; then
     echo "System test is finished successfully"
     HASH=$(git rev-parse --short HEAD)
-    sudo docker tag -f jenkins_semantix_api marcosvgj/semantix_testapi:$HASH
-    sudo docker tag -f jenkins_semantix_api marcosvgj/semantix_testapi:newest
+    sudo docker tag jenkins_semantix_api marcosvgj/semantix_testapi:$HASH
+    sudo docker tag jenkins_semantix_api marcosvgj/semantix_testapi:newest
     echo " ** Pushing image ** "
     sudo docker login -u ********* -p ***********
     sudo docker push marcosvgj/semantix_testapi:$HASH
