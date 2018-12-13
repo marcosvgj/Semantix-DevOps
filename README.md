@@ -13,6 +13,8 @@
     - 2.1 [Pré-requisitos](#pre_requisits)
     - 2.2 [Tarefa 1](#task_1)
     - 2.2 [Tarefa 2](#task_2)
+    
+3. [Integração contínua e testes](#cicd)
 
 <a name="desc"></a>
 ## 1.0 Descrição e melhorias aplicadas
@@ -145,13 +147,10 @@ No caso o respositorio possui o nome **marcosvgj/semantix_api** e a tag **auto**
 Crie um container através da imagem baixada do repositório do Docker Hub: 
 
     > docker run -d -p 4000:4000 "marcosvgj/semantix_api:auto"
-
-
     
-
-
-
-
+<a name="cicd"></a>
+## 3.0 Integração contínua e testes
+### TODO
 
 
 
